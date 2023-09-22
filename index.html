@@ -147,19 +147,9 @@
 
     <section class="contact">
         <div class="container">
-            <h3 class="section__title">Get in touch</h3>
-            <div class="contact__inner">
-                .
-            </div>
-        </div>
-
-    </section>
-
-    <section class="contact">
-        <div class="container">
             <h2 class="section__title">Get in touch</h2>
             <div class="contact__inner">
-                
+
                 <div class="contact__info">
                     <h3 class="info__title">Contact me here</h3>
                     <div class="mail">
@@ -177,12 +167,18 @@
                     </div>
                 </div>
 
-                <form action="#" class="contact__form">
+                <form action="https://formsubmit.co/928513f9882e6d307d36a512e98c1d06" method="POST" class="contact__form">
+                    <!-- Honeypot -->
+                    <input type="text" name="_honey" style="display: none;">
+
+                    <!-- Disable Captcha -->
+                    <input type="hidden" name="_captcha" value="false">
+
                     <input placeholder="Your name*" type="text" name="name" id="form__name" class="form__input" required>
-                    <input placeholder="Your e-mail*" type="text" name="email" id="form__email" class="form__input" required>
+                    <input placeholder="Your email*" type="text" name="email" id="form__email" class="form__input" required>
                     <input placeholder="Subject" type="text" name="topic" id="form__topic" class="form__input">
                     <textarea placeholder="Message here..." name="comment" id="form__comment" class="form__textarea" cols="30" rows="4" required></textarea>
-                    <button href="#" class="btn">Send Message</button>
+                    <button type="submit" href="#" class="btn btn__form">Send Message</button>
                 </form>
             </div> <!-- contact__inner -->
         </div> <!-- container -->
@@ -192,8 +188,12 @@
 
 
     <footer class="footer">
-
-    </footer>
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__text">Have a nice day</div>
+            </div> <!-- footer__inner -->
+        </div> <!-- container -->
+    </footer> <!-- footer -->
 
 </body>
 </html>
