@@ -34,55 +34,73 @@ body {
 
 //____________________________________________________ .header
 .header {
-    padding-top: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    background-color: $back-color;
 
+    .logo {
+        font-size: 30px;
+    }
     .nav {
-        display: flex;
-        justify-content: end;
     }
     .nav__items {
         display: none;
+        flex-direction: column;
+        font-size: 25px;
+        gap: 20px;
+        text-align: center;
+        padding: 15px;
+        background-color: rgb(190, 190, 190);
+
+        transition: all .2s linear;
     }
     .nav__items.active {
-        display: block;
-    }
-    .nav-burger {
-        height: 4px;
-        width: 35px;
-        background-color: $black-color;
-        position: relative;
+        display: flex;
 
+        transition: all .2s linear;
     }
-    .nav-burger::before, .nav-burger::after {
-        content: "";
-        height: 100%;
-        width: 100%;
-        background-color: $black-color;
+    .nav__item {
+
+        transition: all .25s linear;
+    }
+    .nav__item:hover {
+        margin-right: -20px;
+    }
+    .nav__burger {
         position: absolute;
+        display: grid;
+        gap: 4px;
+        top: 20px;
+        right: 20px;
+    }
+    .bar {
+        border-bottom: 1px solid black;
+        background-color: $black-color;
+        width: 30px;
+        height: 3px;
 
-        transition: all .5s linear;
+        transition: transform .3s linear;
     }
-    .nav-burger::before {
-        top: -8px;
+
+    .active .bar:first-child {
+        transform: translateY(7px) rotate(-45deg); 
     }
-    .nav-burger::after {
-        top: 8px;
-    }
-    .nav-burger.active {
-        transform: rotate(45deg);
-    }
-    .nav-burger.active::before {
+    .active .bar:nth-child(2) {
+        transform: translateY(0px) rotate(45deg);
         opacity: 0;
     }
-    .nav-burger.active::after {
-        transform: rotate(-45deg);
-        top: 0;
+    .active .bar:last-child {
+        transform: translateY(-7px)  rotate(45deg);;
     }
+
 }
 
 //____________________________________________________ .intro
 .intro {
-    padding: 150px 0;
+    padding: 230px 0 150px;
 
     .intro__inner {
         display: flex;
