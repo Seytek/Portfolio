@@ -2,9 +2,13 @@
 
 const navItems = document.querySelector('.nav__items');
 const navBurger = document.querySelector('.nav__burger');
-
+const moreBtn = document.querySelector('.btn-more');
 const scrollers = document.querySelectorAll('.scroller');
+const scrollerActive = document.getElementById('scroller');
+let isClickedOnce = false; // flag for animation function, it'll limit to call the function
 
+
+// burger button opens menu
 navBurger.addEventListener('click', () => {
     navItems.classList.toggle('active');
     navBurger.classList.toggle('active');
@@ -12,9 +16,19 @@ navBurger.addEventListener('click', () => {
 
 
 
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    addAnimation();
-}
+// see more projects button opens section with other projects
+// and starts scroller animation
+moreBtn.addEventListener('click', () => {
+    scrollerActive.classList.toggle('active');
+    
+    if (!isClickedOnce && (!window.matchMedia("(prefers-reduced-motion: reduce)").matches)) {
+        addAnimation();
+        isClickedOnce = true;
+    }
+});
+
+
+
 
 function addAnimation() {
     scrollers.forEach(scroller => {

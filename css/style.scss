@@ -44,8 +44,6 @@ body {
     .logo {
         font-size: 30px;
     }
-    .nav {
-    }
     .nav__items {
         display: none;
         flex-direction: column;
@@ -246,9 +244,13 @@ body {
 }
 //____________________________________________________ .other
 .scroller {
+    display: none;
     width: 100%;
-    outline: 1px solid lime;
+    // outline: 1px solid lime;
     // overflow: hidden;
+    &.active {
+        display: block;
+    }
 
     .scroller__inner {
         padding: 20px;

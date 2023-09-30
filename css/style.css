@@ -319,8 +319,11 @@ body {
 }
 
 .scroller {
+  display: none;
   width: 100%;
-  outline: 1px solid lime;
+}
+.scroller.active {
+  display: block;
 }
 .scroller .scroller__inner {
   padding: 20px;
