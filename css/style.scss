@@ -18,6 +18,9 @@ $white-color: white;
     &::after, &::before {
         box-sizing: border-box;
     }
+    a {
+        color: black;
+    }
 }
 
 //____________________________________________________ body
