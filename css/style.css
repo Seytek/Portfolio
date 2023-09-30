@@ -28,11 +28,43 @@
   }
 }
 @media (min-width: 850px) {
+  .header__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav__burger {
+    display: none !important;
+  }
+  .nav__items {
+    all: unset !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    gap: 20px !important;
+  }
+  .nav__item:hover {
+    all: unset !important;
+    color: #C2211C !important;
+  }
   .projects__inner {
     grid-template-columns: 30% 1fr 30%;
   }
+  .project__item {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
 }
 @media (min-width: 991px) {
+  .container {
+    max-width: 1200px;
+  }
   .about__inner {
     grid-template-columns: 1fr 1fr;
   }
@@ -97,8 +129,8 @@ body {
   transition: all 0.2s linear;
 }
 .header .nav__item {
-  -webkit-transition: all 0.25s linear;
-  transition: all 0.25s linear;
+  -webkit-transition: all 0.45s linear;
+  transition: all 0.45s linear;
 }
 .header .nav__item:hover {
   margin-right: -20px;
@@ -208,6 +240,7 @@ body {
 
 .projects {
   padding: 50px 0;
+  overflow: hidden;
 }
 .projects .projects__inner {
   display: grid;
@@ -220,9 +253,20 @@ body {
   background-color: white;
   border-radius: 5px;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .projects .project__content {
-  padding: 8px;
+  height: 100%;
+  padding: 10px;
   display: grid;
   gap: 15px;
 }
@@ -255,7 +299,7 @@ body {
 }
 .projects .btn-more {
   display: block;
-  margin: 25px auto 0;
+  margin: 25px auto;
   font-size: 17px;
   border: none;
   color: black;
@@ -272,6 +316,91 @@ body {
 }
 .projects .btn__arrow:hover {
   fill: #C2211C;
+}
+
+.scroller {
+  width: 100%;
+  outline: 1px solid lime;
+}
+.scroller .scroller__inner {
+  padding: 20px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+.scroller[data-animated=true] {
+  overflow: hidden;
+  -webkit-mask: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(20%, white), color-stop(80%, white), to(transparent));
+  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  mask: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(20%, white), color-stop(80%, white), to(transparent));
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+.scroller[data-animated=true] .scroller__inner {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+}
+@-webkit-keyframes scroll {
+  to {
+    -webkit-transform: translate(calc(-50% - 10px));
+            transform: translate(calc(-50% - 10px));
+  }
+}
+@keyframes scroll {
+  to {
+    -webkit-transform: translate(calc(-50% - 10px));
+            transform: translate(calc(-50% - 10px));
+  }
+}
+.scroller .project__item {
+  position: relative;
+  display: inline;
+}
+.scroller .project__foreground {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgb(2, 0, 36);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(2, 0, 36, 0.82)), color-stop(15%, rgba(43, 43, 43, 0.502)), to(rgba(249, 249, 249, 0)));
+  background: linear-gradient(360deg, rgba(2, 0, 36, 0.82) 0%, rgba(43, 43, 43, 0.502) 15%, rgba(249, 249, 249, 0) 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding: 10px;
+  -webkit-transition: all 0.45s linear;
+  transition: all 0.45s linear;
+}
+.scroller .project__foreground:hover {
+  opacity: 1;
+}
+.scroller .project__title {
+  color: white;
+  font-size: 16px;
+}
+.scroller .btn__project {
+  padding: 5px;
+  width: 80px;
 }
 
 .about {

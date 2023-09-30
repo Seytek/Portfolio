@@ -64,7 +64,7 @@ body {
     }
     .nav__item {
 
-        transition: all .25s linear;
+        transition: all .45s linear;
     }
     .nav__item:hover {
         margin-right: -20px;
@@ -172,9 +172,11 @@ body {
 }
 
 //____________________________________________________ .projects
+
 .projects {
     padding: 50px 0;
-
+    overflow: hidden;
+    
     .projects__inner {
         display: grid;
         gap: 10px;
@@ -186,9 +188,13 @@ body {
         background-color: $white-color;
         border-radius: 5px;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     .project__content {
-        padding: 8px;
+        height: 100%;
+        padding: 10px;
         display: grid;
         gap: 15px;
     }
@@ -219,7 +225,7 @@ body {
     }
     .btn-more {
         display: block;
-        margin: 25px auto 0;
+        margin: 25px auto;
         font-size: 17px;
         border: none;
         color: $black-color;
@@ -238,6 +244,78 @@ body {
         fill: $focus-color;
     }
 }
+//____________________________________________________ .other
+.scroller {
+    width: 100%;
+    outline: 1px solid lime;
+    // overflow: hidden;
+
+    .scroller__inner {
+        padding: 20px;
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+
+
+    &[data-animated="true"] {
+        // border: 5px solid lime;
+        overflow: hidden;
+        -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent); // only for chrome
+        mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);;
+    }
+    &[data-animated="true"] .scroller__inner {
+        width: max-content;
+        flex-wrap: nowrap;
+        animation: scroll 40s linear infinite;
+    }
+
+    @keyframes scroll {
+        to {
+            transform: translate(calc(-50% - 10px));
+        }
+    }
+
+
+
+    .project__item {
+        position: relative;
+        display: inline;
+    }
+    .project__foreground {
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        // background-color: rgba(89, 89, 89, 0.5);
+        background: rgb(2,0,36);
+        background: linear-gradient(360deg, rgba(2,0,36,0.82) 0%, rgba(43, 43, 43, 0.502) 15%, rgba(249,249,249,0) 100%);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+
+        transition: all .45s linear;
+    }
+    .project__foreground:hover {
+        opacity: 1;
+    }
+    .project__title {
+        color: white;
+        font-size: 16px;
+    }
+    .btn__project {
+        padding: 5px;
+        width: 80px;
+    }
+}
+
 
 //____________________________________________________ .about
 .about {
@@ -315,3 +393,73 @@ body {
         font-size: 15px;
     }
 }
+
+
+
+
+
+// // _____________________________________________________________ media
+
+// @media (min-width: 400px) {
+//     .project__links {
+//         grid-template-columns: 1fr 1fr;
+//     }
+// }
+// @media (min-width: 576px) {
+//     .nav__items {
+//         display: flex;    
+//     }
+//     .nav__burger {
+//         display: none;
+//     }
+// }
+
+// @media (min-width: 576px) and (max-width: 850px) {
+//     .projects__inner {
+//         grid-template-columns: repeat(8, 1fr);
+//     }
+//     .project__item:first-child {
+//         grid-column: 2 / 8;
+//     }
+//     .project__item:nth-child(2) {
+//         grid-column: 1 / 5;
+//     }
+//     .project__item:last-child {
+//         grid-column: 5 / 9;
+//     }
+// }
+
+// @media (min-width: 850px) {
+//     .nav__burger {
+//         display: none;
+//     }
+//     .header__inner {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//     }
+//     .nav__items {
+//         all: unset;
+//         display: flex;
+//         gap: 20px;
+//     }
+//     .nav__item:hover {
+//         all: unset;
+//         color: $focus-color;
+//     }
+//     .projects__inner {
+//         grid-template-columns: 30% 1fr 30%;
+//     }
+// }
+
+// @media (min-width: 991px) {
+//     .container {
+//         max-width: 1200px;
+//     }
+//     .about__inner {
+//         grid-template-columns: 1fr 1fr;
+//     }
+//     .contact__inner {
+//         grid-template-columns: 1fr 1fr;
+//     }
+// }
