@@ -23,6 +23,14 @@
     width: 25vw;
     border: 1px #c2211c dashed;
   }
+  .project__item {
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+  .project__item:hover {
+    -webkit-transform: translate(0, -10px);
+            transform: translate(0, -10px);
+  }
 }
 @media (min-width: 576px) and (max-width: 850px) {
   .projects__inner {

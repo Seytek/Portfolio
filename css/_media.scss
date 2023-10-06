@@ -28,6 +28,13 @@ $white-color: white;
     width: 25vw;
     border: 1px $focus-color dashed;
   }
+  .project__item {
+    transition: all 0.3s linear;
+  }
+  .project__item:hover {
+    transform: translate(0, -10px);
+    // border: 0 0 3px black;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 850px) {
