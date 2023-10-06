@@ -1,261 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
     <title>My portfolio</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <div class="logo">SD</div>
-                <div class="nav__burger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <ul class="nav__items">
-                    <li class="nav__item">Projects</li>
-                    <li class="nav__item">About me</li>
-                    <a href="#contact" class="nav__item">Contact</a>
-                </ul>
-            </div>
+      <div class="container">
+        <div class="header__inner">
+          <div class="logo">SD</div>
+          <div class="nav__burger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="nav__items">
+            <a href="#projects" class="nav__item">Projects</a>
+            <a href="#about" class="nav__item">About me</a>
+            <a href="#contact" class="nav__item">Contact</a>
+          </ul>
         </div>
+      </div>
     </header>
 
-
     <section class="intro">
-        <div class="container">
-            <div class="intro__inner">
-                <div class="social">
-                    <a href="https://www.linkedin.com/in/davletkulov/" target="_blank">
-                        <img src="icons/linkedin.svg" alt="#" class="social__item">
-                    </a>
-                    <a href="https://github.com/Seytek" target="_blank">
-                        <img src="icons/github.svg" alt="#" class="social__item">
-                    </a>
-                </div>
-                <h1 class="intro__title">Hi! I'm <span>Seitek Davletkulov</span></h1>
-                <h3 class="intro__subtitle">Front-end JavaScript and React Developer</h3>
-                <a href="#contact" class="btn btn__intro">Contact me</a>
-            </div>
+      <div class="container">
+        <div class="intro__inner">
+          <div class="social">
+            <a href="https://www.linkedin.com/in/davletkulov/" target="_blank">
+              <img src="icons/linkedin.svg" alt="#" class="social__item" />
+            </a>
+            <a href="https://github.com/Seytek" target="_blank">
+              <img src="icons/github.svg" alt="#" class="social__item" />
+            </a>
+          </div>
+          <h1 class="intro__title">Hi! I'm <span>Seitek Davletkulov</span></h1>
+          <h3 class="intro__subtitle">
+            Front-end JavaScript and React Developer
+          </h3>
+          <a href="#contact" class="btn btn__intro">Contact me</a>
         </div>
-    </section>
-    
-
-
-    <section class="projects">
-        <div class="container">
-            <h3 class="section__title">Projects</h3>
-            <div class="projects__inner">
-                <div class="project__item">
-                    <img src="https://placehold.it/500x300" alt="#" class="img">
-                    <div class="project__content">
-                        <h4 class="project__title">Lorem ipsum dolor</h4>
-                        <div class="project__stack">
-                            <div class="stack__item html">Html</div>
-                            <div class="stack__item css">Css</div>
-                            <div class="stack__item js">Javascript</div>
-                        </div>
-                        <p class="project__description">
-                            Illo consequuntur quam quas fugiat sapiente doloribus, tempora consequatur facilis iste ducimus.
-                        </p>
-                        <div class="project__links">
-                            <button class="btn btn__project">Live preview</button>
-                            <button class="btn btn__project">Code</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project__item">
-                    <img src="https://placehold.it/500x300" alt="#" class="img">
-                    <div class="project__content">
-                        <h4 class="project__title">Lorem ipsum dolor</h4>
-                        <div class="project__stack">
-                            <div class="stack__item html">Html</div>
-                            <div class="stack__item css">Css</div>
-                            <div class="stack__item js">Javascript</div>
-                        </div>
-                        <p class="project__description">
-                            Lorem ipsum dolor selit consequatur fisequuntur quam quas fugis acilis iste ducimus.
-                        </p>
-                        <div class="project__links">
-                            <button class="btn btn__project">Live preview</button>
-                            <button class="btn btn__project">Code</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project__item">
-                    <img src="https://placehold.it/500x300" alt="#" class="img">
-                    <div class="project__content">
-                        <h4 class="project__title">Lorem ipsum dolor</h4>
-                        <div class="project__stack">
-                            <div class="stack__item html">Html</div>
-                            <div class="stack__item css">Css</div>
-                            <div class="stack__item js">Javascript</div>
-                        </div>
-                        <p class="project__description">
-                            Lorem ipsum dolor sisequuntur quam quas fugis, tempora consequatur facilis iste ducimus.
-                        </p>
-                        <div class="project__links">
-                            <button class="btn btn__project">Live preview</button>
-                            <button class="btn btn__project">Code</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <button class="btn-more">See more projects
-                <svg class="btn__arrow" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class="hovered-paths"><g><path d="M13 4a1 1 0 1 0-2 0v13.586l-5.293-5.293a1 1 0 0 0-1.414 1.414l7 7a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0-1.414-1.414L13 17.586z" opacity="1" data-original="#000000" class="hovered-path"></path></g></svg>
-            </button>
-
-            <div class="scroller" id="scroller">
-                <div class="scroller__inner">
-                    <div class="project__item">
-                        <img src="https://unsplash.it/220/100?random=101" alt="#" class="project__img">
-                        <div class="project__foreground">
-                            <div class="project__links">
-                                <a href="https://seytek.github.io/ExpenseTrackerApp/ "class="btn btn__project" target="_blank">Live</a>
-                                <a href="https://github.com/Seytek/ExpenseTrackerApp" class="btn btn__project" target="_blank">Code</a>
-                            </div>
-                            <div class="project__title">Expense Tracker</div>
-                        </div>
-                    </div>
-                    <div class="project__item">
-                        <img src="https://unsplash.it/220/100?random=102" alt="#" class="project__img">
-                        <div class="project__foreground">
-                            <div class="project__links">
-                                <a href="https://seytek.github.io/ToDoListVanillaJS/" class="btn btn__project" target="_blank">Live</a>
-                                <a href="https://github.com/Seytek/ToDoListVanillaJS" class="btn btn__project" target="_blank">Code</a>
-                            </div>
-                            <div class="project__title">To Do List</div>
-                        </div>
-                    </div>
-                    <div class="project__item">
-                        <img src="https://unsplash.it/220/100?random=103" alt="#" class="project__img">
-                        <div class="project__foreground">
-                            <div class="project__links">
-                                <a href="https://seytek.github.io/PianoJS/" class="btn btn__project" target="_blank">Live</a>
-                                <a href="https://github.com/Seytek/PianoJS" class="btn btn__project" target="_blank">Code</a>
-                            </div>
-                            <div class="project__title">Piano</div>
-                        </div>
-                    </div>
-                    <div class="project__item">
-                        <img src="https://unsplash.it/220/100?random=104" alt="#" class="project__img">
-                        <div class="project__foreground">
-                            <div class="project__links">
-                                <a href="https://seytek.github.io/CountdownTimer/" class="btn btn__project" target="_blank">Live</a>
-                                <a href="https://github.com/Seytek/CountdownTimer" class="btn btn__project" target="_blank">Code</a>
-                            </div>
-                            <div class="project__title">Countdown Timer</div>
-                        </div>
-                    </div>
-                    <div class="project__item">
-                        <img src="https://placehold.it/220x100" alt="#" class="project__img">
-                        <div class="project__foreground">
-                            <div class="project__links">
-                                <a href="" class="btn btn__project" target="_blank">Live</a>
-                                <a href="" class="btn btn__project" target="_blank">Code</a>
-                            </div>
-                            <div class="project__title">Lorem Ipsum Project</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
+      </div>
     </section>
 
-
-
-
-    
-    <section class="about">
-        <div class="container">
-            <h3 class="section__title">About me</h3>
-            <div class="about__inner">
-                <div class="info">
-                    <p class="info__text">Hello!</p>
-                    <p class="info__text">My name is Seitek and I'm Front-end Developer.</p>
-                    <p class="info__text">At the moment I am studying at the Czech University of Life Sciences in the department of Computer Science.</p>
-                    <a class="info__link">Download Resume</a>
-                </div>
-
-                <div class="skills">
-                    <h4 class="skills__title">My skills</h4>
-                    <ul class="skills__items">
-                        <li class="skill">HTML</li>
-                        <li class="skill">CSS</li>
-                        <li class="skill">SCSS</li>
-                        <li class="skill">Javascript</li>
-                        <li class="skill">Git</li>
-                    </ul>
-                </div>
+    <section class="projects" id="projects">
+      <div class="container">
+        <h3 class="section__title">Projects</h3>
+        <div class="projects__inner">
+          <div class="project__item">
+            <img src="https://placehold.it/500x300" alt="#" class="img" />
+            <div class="project__content">
+              <h4 class="project__title">Lorem ipsum dolor</h4>
+              <div class="project__stack">
+                <div class="stack__item html">Html</div>
+                <div class="stack__item css">Css</div>
+                <div class="stack__item js">Javascript</div>
+              </div>
+              <p class="project__description">
+                Illo consequuntur quam quas fugiat sapiente doloribus, tempora
+                consequatur facilis iste ducimus.
+              </p>
+              <div class="project__links">
+                <button class="btn btn__project">Live preview</button>
+                <button class="btn btn__project">Code</button>
+              </div>
             </div>
+          </div>
+
+          <div class="project__item">
+            <img src="https://placehold.it/500x300" alt="#" class="img" />
+            <div class="project__content">
+              <h4 class="project__title">Lorem ipsum dolor</h4>
+              <div class="project__stack">
+                <div class="stack__item html">Html</div>
+                <div class="stack__item css">Css</div>
+                <div class="stack__item js">Javascript</div>
+              </div>
+              <p class="project__description">
+                Lorem ipsum dolor selit consequatur fisequuntur quam quas fugis
+                acilis iste ducimus.
+              </p>
+              <div class="project__links">
+                <button class="btn btn__project">Live preview</button>
+                <button class="btn btn__project">Code</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="project__item">
+            <img src="https://placehold.it/500x300" alt="#" class="img" />
+            <div class="project__content">
+              <h4 class="project__title">Lorem ipsum dolor</h4>
+              <div class="project__stack">
+                <div class="stack__item html">Html</div>
+                <div class="stack__item css">Css</div>
+                <div class="stack__item js">Javascript</div>
+              </div>
+              <p class="project__description">
+                Lorem ipsum dolor sisequuntur quam quas fugis, tempora
+                consequatur facilis iste ducimus.
+              </p>
+              <div class="project__links">
+                <button class="btn btn__project">Live preview</button>
+                <button class="btn btn__project">Code</button>
+              </div>
+            </div>
+          </div>
         </div>
 
+        <button class="btn-more">
+          See more projects
+          <svg
+            class="btn__arrow"
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:svgjs="http://svgjs.com/svgjs"
+            width="512"
+            height="512"
+            x="0"
+            y="0"
+            viewBox="0 0 24 24"
+            style="enable-background: new 0 0 512 512"
+            xml:space="preserve"
+            class="hovered-paths"
+          >
+            <g>
+              <path
+                d="M13 4a1 1 0 1 0-2 0v13.586l-5.293-5.293a1 1 0 0 0-1.414 1.414l7 7a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0-1.414-1.414L13 17.586z"
+                opacity="1"
+                data-original="#000000"
+                class="hovered-path"
+              ></path>
+            </g>
+          </svg>
+        </button>
+
+        <div class="scroller" id="scroller">
+          <div class="scroller__inner">
+            <div class="project__item">
+              <img
+                src="https://unsplash.it/220/100?random=101"
+                alt="#"
+                class="project__img"
+              />
+              <div class="project__foreground">
+                <div class="project__links">
+                  <a
+                    href="https://seytek.github.io/ExpenseTrackerApp/ "
+                    class="btn btn__project"
+                    target="_blank"
+                    >Live</a
+                  >
+                  <a
+                    href="https://github.com/Seytek/ExpenseTrackerApp"
+                    class="btn btn__project"
+                    target="_blank"
+                    >Code</a
+                  >
+                </div>
+                <div class="project__title">Expense Tracker</div>
+              </div>
+            </div>
+            <div class="project__item">
+              <img
+                src="https://unsplash.it/220/100?random=102"
+                alt="#"
+                class="project__img"
+              />
+              <div class="project__foreground">
+                <div class="project__links">
+                  <a
+                    href="https://seytek.github.io/ToDoListVanillaJS/"
+                    class="btn btn__project"
+                    target="_blank"
+                    >Live</a
+                  >
+                  <a
+                    href="https://github.com/Seytek/ToDoListVanillaJS"
+                    class="btn btn__project"
+                    target="_blank"
+                    >Code</a
+                  >
+                </div>
+                <div class="project__title">To Do List</div>
+              </div>
+            </div>
+            <div class="project__item">
+              <img
+                src="https://unsplash.it/220/100?random=103"
+                alt="#"
+                class="project__img"
+              />
+              <div class="project__foreground">
+                <div class="project__links">
+                  <a
+                    href="https://seytek.github.io/PianoJS/"
+                    class="btn btn__project"
+                    target="_blank"
+                    >Live</a
+                  >
+                  <a
+                    href="https://github.com/Seytek/PianoJS"
+                    class="btn btn__project"
+                    target="_blank"
+                    >Code</a
+                  >
+                </div>
+                <div class="project__title">Piano</div>
+              </div>
+            </div>
+            <div class="project__item">
+              <img
+                src="https://unsplash.it/220/100?random=104"
+                alt="#"
+                class="project__img"
+              />
+              <div class="project__foreground">
+                <div class="project__links">
+                  <a
+                    href="https://seytek.github.io/CountdownTimer/"
+                    class="btn btn__project"
+                    target="_blank"
+                    >Live</a
+                  >
+                  <a
+                    href="https://github.com/Seytek/CountdownTimer"
+                    class="btn btn__project"
+                    target="_blank"
+                    >Code</a
+                  >
+                </div>
+                <div class="project__title">Countdown Timer</div>
+              </div>
+            </div>
+            <div class="project__item">
+              <img
+                src="https://placehold.it/220x100"
+                alt="#"
+                class="project__img"
+              />
+              <div class="project__foreground">
+                <div class="project__links">
+                  <a href="" class="btn btn__project" target="_blank">Live</a>
+                  <a href="" class="btn btn__project" target="_blank">Code</a>
+                </div>
+                <div class="project__title">Lorem Ipsum Project</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <section class="about" id="about">
+      <div class="container">
+        <h3 class="section__title">About me</h3>
+        <div class="about__inner">
+          <div class="info">
+            <p class="info__text">Hello!</p>
+            <p class="info__text">
+              My name is Seitek and I'm Front-end Developer.
+            </p>
+            <p class="info__text">
+              At the moment I am studying at the Czech University of Life
+              Sciences in the department of Computer Science.
+            </p>
+            <a class="info__link">Download Resume</a>
+          </div>
 
-
+          <div class="skills">
+            <h4 class="skills__title">My skills</h4>
+            <ul class="skills__items">
+              <li class="skill">HTML</li>
+              <li class="skill">CSS</li>
+              <li class="skill">SCSS</li>
+              <li class="skill">Javascript</li>
+              <li class="skill">Git</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section__title">Get in touch</h2>
-            <div class="contact__inner">
+      <div class="container">
+        <h2 class="section__title">Get in touch</h2>
+        <div class="contact__inner">
+          <div class="contact__info">
+            <h3 class="info__title">Contact me here</h3>
+            <div class="mail">
+              <span class="mail__img">E-mail: </span>
+              clam.gilan@gmail.com
+            </div>
+            <div class="info__text">
+              Feel free to write to me about anything. Whether it's a job
+              opportunity or a chat
+            </div>
+            <div class="social">
+              <a
+                href="https://www.linkedin.com/in/davletkulov/"
+                target="_blank"
+              >
+                <img src="icons/linkedin.svg" alt="#" class="social__item" />
+              </a>
+              <a href="https://github.com/Seytek" target="_blank">
+                <img src="icons/github.svg" alt="#" class="social__item" />
+              </a>
+            </div>
+          </div>
 
-                <div class="contact__info">
-                    <h3 class="info__title">Contact me here</h3>
-                    <div class="mail">
-                        <span class="mail__img">E-mail: </span>
-                        clam.gilan@gmail.com
-                    </div>
-                    <div class="info__text">Feel free to write to me about anything. Whether it's a job opportunity or a chat</div>
-                    <div class="social">
-                        <a href="https://www.linkedin.com/in/davletkulov/" target="_blank">
-                            <img src="icons/linkedin.svg" alt="#" class="social__item">
-                        </a>
-                        <a href="https://github.com/Seytek" target="_blank">
-                            <img src="icons/github.svg" alt="#" class="social__item">
-                        </a>
-                    </div>
-                </div>
+          <form
+            action="https://formsubmit.co/928513f9882e6d307d36a512e98c1d06"
+            method="POST"
+            class="contact__form"
+          >
+            <!-- Honeypot -->
+            <input type="text" name="_honey" style="display: none" />
 
-                <form action="https://formsubmit.co/928513f9882e6d307d36a512e98c1d06" method="POST" class="contact__form">
-                    <!-- Honeypot -->
-                    <input type="text" name="_honey" style="display: none;">
+            <!-- Disable Captcha -->
+            <input type="hidden" name="_captcha" value="false" />
 
-                    <!-- Disable Captcha -->
-                    <input type="hidden" name="_captcha" value="false">
-
-                    <input placeholder="Your name*" type="text" name="name" id="form__name" class="form__input" required>
-                    <input placeholder="Your email*" type="text" name="email" id="form__email" class="form__input" required>
-                    <input placeholder="Subject" type="text" name="topic" id="form__topic" class="form__input">
-                    <textarea placeholder="Message here..." name="comment" id="form__comment" class="form__textarea" cols="30" rows="4" required></textarea>
-                    <button type="submit" href="#" class="btn btn__form">Send Message</button>
-                </form>
-            </div> <!-- contact__inner -->
-        </div> <!-- container -->
-    </section> <!-- contact -->
-
-
-
+            <input
+              placeholder="Your name*"
+              type="text"
+              name="name"
+              id="form__name"
+              class="form__input"
+              required
+            />
+            <input
+              placeholder="Your email*"
+              type="text"
+              name="email"
+              id="form__email"
+              class="form__input"
+              required
+            />
+            <input
+              placeholder="Subject"
+              type="text"
+              name="topic"
+              id="form__topic"
+              class="form__input"
+            />
+            <textarea
+              placeholder="Message here..."
+              name="comment"
+              id="form__comment"
+              class="form__textarea"
+              cols="30"
+              rows="4"
+              required
+            ></textarea>
+            <button type="submit" href="#" class="btn btn__form">
+              Send Message
+            </button>
+          </form>
+        </div>
+        <!-- contact__inner -->
+      </div>
+      <!-- container -->
+    </section>
+    <!-- contact -->
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer__inner">
-                <div class="footer__text">Have a nice day</div>
-            </div> <!-- footer__inner -->
-        </div> <!-- container -->
-    </footer> <!-- footer -->
-
-</body>
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__text">Have a nice day</div>
+        </div>
+        <!-- footer__inner -->
+      </div>
+      <!-- container -->
+    </footer>
+    <!-- footer -->
+  </body>
 </html>

@@ -12,6 +12,17 @@
   .nav__burger {
     display: none;
   }
+  .section__title {
+    margin: 40px 0 !important;
+  }
+  .section__title::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    margin-left: 20px;
+    width: 25vw;
+    border: 1px #c2211c dashed;
+  }
 }
 @media (min-width: 576px) and (max-width: 850px) {
   .projects__inner {
@@ -51,7 +62,7 @@
   }
   .nav__item:hover {
     all: unset !important;
-    color: #C2211C !important;
+    color: #c2211c !important;
   }
   .projects__inner {
     grid-template-columns: 30% 1fr 30%;
@@ -59,6 +70,9 @@
   .project__item {
     -ms-flex-item-align: end;
         align-self: flex-end;
+  }
+  .section__title {
+    margin: 70px 0 !important;
   }
 }
 @media (min-width: 991px) {
@@ -201,7 +215,7 @@ body {
   -ms-flex-item-align: start;
       align-self: flex-start;
   border-radius: 5px;
-  border: #C2211C 1px solid;
+  border: #c2211c 1px solid;
   position: relative;
   isolation: isolate;
 }
@@ -212,7 +226,7 @@ body {
   content: "";
   position: absolute;
   z-index: -1;
-  background-color: #C2211C;
+  background-color: #c2211c;
   inset: 0;
   scale: 0 1;
   -webkit-transform-origin: left;
@@ -228,6 +242,7 @@ body {
   font-size: 30px;
   font-weight: 700;
   margin: 15px 0;
+  position: relative;
 }
 
 .social {
@@ -297,7 +312,7 @@ body {
   background-color: white;
 }
 .projects .btn__project:nth-child(2) {
-  background-color: #C2211C;
+  background-color: #c2211c;
   color: white;
 }
 .projects .btn-more {
@@ -309,7 +324,7 @@ body {
   background-color: #f8efe8;
 }
 .projects .btn-more:hover {
-  color: #C2211C;
+  color: #c2211c;
 }
 .projects .btn__arrow {
   margin-left: 5px;
@@ -318,7 +333,7 @@ body {
   height: 23px;
 }
 .projects .btn__arrow:hover {
-  fill: #C2211C;
+  fill: #c2211c;
 }
 
 .scroller {
@@ -350,8 +365,8 @@ body {
   width: max-content;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -webkit-animation: scroll 40s linear infinite;
-          animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 50s linear infinite;
+          animation: scroll 50s linear infinite;
 }
 @-webkit-keyframes scroll {
   to {
