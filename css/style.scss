@@ -23,6 +23,9 @@ $white-color: white;
     color: black;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
 
 //____________________________________________________ body
 body {
